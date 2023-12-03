@@ -1,0 +1,11 @@
+{% extends 'shopapp/base.html' %}
+{% block title %} Продукт {% endblock %}
+
+
+{% block content %}
+<h1>список клиентов</h1> <br>
+{% for client in clients %}
+    <p>id: {{ client.id }}    наименование: {{ client.name_clients }} Email: {{ client.email }} телефон: {{ client.phone_client }} адрес: {{ client.address}}</p>
+
+{%  endfor %}
+{% endblock %}
